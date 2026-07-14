@@ -121,7 +121,7 @@ function startTimer(seconds){
 globalTimerBtn.onclick=()=>startTimer(180);
 pauseTimerBtn.onclick=()=>{if(timerRemaining<=0)return;timerPaused=!timerPaused;if(timerPaused){clearInterval(timerInterval);pauseTimerBtn.textContent='Resume';}else{timerEnd=Date.now()+timerRemaining*1000;pauseTimerBtn.textContent='Pause';timerInterval=setInterval(()=>{timerRemaining=Math.max(0,(timerEnd-Date.now())/1000);drawTimer();if(timerRemaining<=0){clearInterval(timerInterval);navigator.vibrate?.([180,100,180]);timerText.textContent='READY';timerDock.classList.add('timer-ready');}},250);}};
 skipTimerBtn.onclick=()=>{clearInterval(timerInterval);timerRemaining=0;timerText.textContent='READY';navigator.vibrate?.([120]);timerDock.classList.add('timer-ready');};
-stopTimerBtn.onclick=()=>{clearInterval(timerInterval);timerDock.classList.add('hidden');timerDock.classList.remove('timer-ready');};timerDock.classList.add('hidden')};
+stopTimerBtn.onclick=()=>{clearInterval(timerInterval);timerDock.classList.add('hidden');timerDock.classList.remove('timer-ready');};
 
 function renderProgress(){
   const sessions=[];
