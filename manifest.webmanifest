@@ -1,0 +1,16 @@
+{
+  "name": "Project Phoenix",
+  "short_name": "Phoenix",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<title>Project Phoenix</title>
+</head>
+<body>
+<div class="app-shell">
+<header class="app-header">
+  <div class="brand-lockup">
+    <img src="icons/icon.svg" class="brand-icon" alt="">
+    <div><div class="brand-name">PROJECT <span>PHOENIX</span></div><div class="brand-tag">BUILD · REPAIR · PERFORM</div></div>
+  </div>
+  <button id="installBtn" class="icon-button hidden">Install</button>
+</header>
+
+<main>
+<section id="homeView" class="view active">
+  <div class="hero-card">
+    <div class="hero-copy">
+      <div class="kicker">BLOCK 1 · AC RESTORATION</div>
+      <h1 id="heroTitle">Week 1 · Foundation</h1>
+      <p id="heroSubtitle">Strength base + shoulder-safe volume</p>
+    </div>
+    <div class="shoulder-ring">
+      <span>Shoulder</span>
+      <strong id="homeShoulder">—</strong>
+    </div>
+  </div>
+
+  <div class="selector-row">
+    <select id="weekSelect"></select>
+    <select id="daySelect"></select>
+  </div>
+
+  <div class="metric-grid">
+    <div class="metric"><span>Duration</span><strong id="homeDuration">56 min</strong></div>
+    <div class="metric"><span>Target</span><strong>RPE 6–8</strong></div>
+    <div class="metric"><span>Pain ceiling</span><strong>3/10</strong></div>
+  </div>
+
+  <div class="focus-card">
+    <div class="section-label">TODAY'S FOCUS</div>
+    <div id="focusChips" class="chips"></div>
+  </div>
+
+  <div class="coach-note">
+    <div class="section-label">COACH'S NOTE</div>
+    <p>Build muscle without spending your shoulder budget. Smooth reps, no grinders, no provocative traction.</p>
+  </div>
+
+  <button id="startWorkoutBtn" class="cta">START WORKOUT</button>
+</section>
+
+<section id="workoutView" class="view">
+  <div class="workout-topline">
+    <button id="backHome" class="text-button">← Home</button>
+    <div><span id="workoutPhase">Week 1 · Day 1</span><strong id="workoutTitle">Foundation</strong></div>
+    <button id="globalTimerBtn" class="text-button">Timer</button>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+    <span id="progressText">0%</span>
+  </div>
+
+  <section class="warmup-card">
+    <div class="section-head"><div><div class="section-label">WARM-UP</div><h2>Prime the joint</h2></div><span>4–6 min</span></div>
+    <div id="warmupList"></div>
+  </section>
+
+  <div id="exerciseStage"></div>
+
+  <div class="pager">
+    <button id="prevExercise">Previous</button>
+    <span id="exerciseCounter">1 / 5</span>
+    <button id="nextExercise">Next</button>
+  </div>
+
+  <section class="session-card">
+    <div class="section-label">SESSION SCORE</div>
+    <div class="pain-grid">
+      <label><span>During workout</span><div><input id="painNow" type="range" min="0" max="10" value="0"><output id="painNowOut">0</output></div></label>
+      <label><span>Next morning</span><div><input id="painNext" type="range" min="0" max="10" value="0"><output id="painNextOut">0</output></div></label>
+    </div>
+    <textarea id="sessionNotes" placeholder="What felt strong? What irritated the AC joint?"></textarea>
+    <button id="saveWorkoutBtn" class="cta">SAVE SESSION</button>
+  </section>
+</section>
+
+<section id="progressView" class="view">
+  <div class="workout-topline">
+    <button id="backFromProgress" class="text-button">← Home</button>
+    <div><span>PROJECT PHOENIX</span><strong>Progress</strong></div><span></span>
+  </div>
+  <div class="progress-dashboard">
+    <div class="metric big"><span>Completed sessions</span><strong id="completedSessions">0</strong></div>
+    <div class="metric big"><span>Average shoulder pain</span><strong id="avgPain">—</strong></div>
+  </div>
+  <section class="panel">
+    <div class="section-label">RECENT SESSIONS</div>
+    <div id="recentSessions"></div>
+  </section>
+</section>
+</main>
+
+<nav class="bottom-nav">
+  <button data-view="homeView" class="nav-active">Home</button>
+  <button data-view="workoutView">Workout</button>
+  <button data-view="progressView">Progress</button>
+</nav>
+
+<div id="timerDock" class="timer-dock hidden">
+  <div><span>REST TIMER</span><strong id="timerText">00:00</strong></div>
+  <button id="stopTimerBtn">Stop</button>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
