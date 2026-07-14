@@ -57,3 +57,5 @@ textarea{width:100%;min-height:98px;margin-top:12px;background:#0b0b0e;color:whi
   .pain-grid{grid-template-columns:1fr}
   .exercise-card{min-height:440px}
 }
+
+.rpe-select{width:100%;min-width:0;background:#0b0b0e;color:white;border:1px solid #303038;border-radius:11px;padding:10px}.timer-actions{display:flex;gap:7px}.timer-actions button{background:#27272d;color:white;border:1px solid #3a3a42;border-radius:10px;padding:9px 11px}.timer-actions #stopTimerBtn{background:var(--red);border-color:var(--red)}.timer-dock.timer-ready{border-color:var(--green);box-shadow:0 0 0 2px rgba(92,209,126,.18),0 18px 40px rgba(0,0,0,.45)}.timer-dock.timer-ready strong{color:var(--green)}@media(max-width:520px){.timer-dock{gap:10px}.timer-actions{gap:5px}.timer-actions button{padding:8px 9px;font-size:12px}}
